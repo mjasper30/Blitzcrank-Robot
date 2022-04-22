@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<head><title>MACARAEG_ROBOT</title></head>
+<style>
+	body{
+		background-color: white;
+	}
+
+.head{
+border-style: solid;
+background-color: yellow;
+height: 160px;
+width: 160px;
+position: absolute;
+top: 10%;
+left: 44%;
+border-top-right-radius: 60%;
+border-top-left-radius: 60%;
+border-bottom-right-radius: 70%;
+border-bottom-left-radius: 70%;
+}
+
+.headhalf{
+background-color: black;
+height: 162px;
+width: 4px;
+position: absolute;
+top: 10%;
+left: 51%;
+}
+
+.body{
+border-style: solid;
+background-color: yellow;
+height: 250px;
+width: 250px;
+position: absolute;
+top: 30%;
+left: 40%;
+border-top-right-radius: 60%;
+border-top-left-radius: 60%;
+border-bottom-right-radius: 95%;
+border-bottom-left-radius: 95%
+}
+
+.shoulderl{
+background-color: yellow;
+border-style: solid;
+height: 100px;
+width: 100px;
+position: absolute;
+top: 30%;
+left: 32%;
+border-bottom-left-radius: 30%;
+border-top-left-radius: 40%;
+border-bottom-right-radius: 50%;
+}
+
+.shoulder2{
+background-color: yellow;
+border-style: solid;
+height: 100px;
+width: 100px;
+position: absolute;
+top: 30%;
+left: 62%;
+border-bottom-right-radius: 30%;
+border-top-right-radius: 40%;
+border-bottom-left-radius: 50%;
+}
+
+.core{
+	background-color: orange;
+	border-style: solid;
+	height:110px;
+	width: 110px;
+	position: absolute;
+	top: 50%;
+	left: 47%;
+	border-radius: 100%;
+}
+.eyesL{
+	background-color: black;
+	height:50px;
+	width: 50px;
+	position: absolute;
+	top: 22%;
+	left: 53%;
+	border-radius: 100%;
+}
+
+.eyesL1{
+	background-color: white;
+	height:40px;
+	width: 40px;
+	position: absolute;
+	top: 22.8%;
+	left: 53.5%;
+	border-radius: 100%;
+}
+
+.eyesR{
+	background-color: black;
+	height:32px;
+	width: 32px;
+	position: absolute;
+	top: 24.7%;
+	left: 46%;
+	border-radius: 100%;
+}
+.eyesR1{
+	background-color: white;
+	height:25px;
+	width: 25px;
+	position: absolute;
+	top: 25.4%;
+	left: 46.3%;
+	border-radius: 100%;
+	}
+
+.squaresarm1L{
+	background-color: yellow;
+	border-style: solid;
+	height:20px;
+	width: 40px;
+	position: absolute;
+	top: 51%;
+	left: 34.5%;
+}
+
+.squaresarm1R{
+	background-color: yellow;
+	border-style: solid;
+	height:20px;
+	width: 40px;
+	position: absolute;
+	top: 51%;
+	left: 65.5%;
+}
+
+.squaresarm2L{
+	background-color: orange;
+	border-style: solid;
+	height:20px;
+	width: 20px;
+	position: absolute;
+	top: 54%;
+	left: 35.5%;
+}
+
+.squaresarm2R{
+	background-color: orange;
+	border-style: solid;
+	height:20px;
+	width: 20px;
+	position: absolute;
+	top: 54%;
+	left: 66.5%;
+}
+
+.squaresarm3L{
+	background-color: yellow;
+	border-style: solid;
+	height:20px;
+	width: 45px;
+	position: absolute;
+	top: 57%;
+	left: 34%;
+}
+
+.squaresarm3R{
+	background-color: yellow;
+	border-style: solid;
+	height:20px;
+	width: 45px;
+	position: absolute;
+	top: 57%;
+	left: 65.5%;
+}
+
+.squaresarm4R{
+	background-color: yellow;
+	border-style: solid;
+	height:30px;
+	width: 60px;
+	position: absolute;
+	top: 60%;
+	left: 65%;
+}
+
+.squaresarm4L{
+	background-color: yellow;
+	border-style: solid;
+	height:30px;
+	width: 60px;
+	position: absolute;
+	top: 60%;
+	left: 33%;
+}
+
+.squaresarm5R{
+	background-color: yellow;
+	border-style: solid;
+	height:33px;
+	width: 80px;
+	position: absolute;
+	top: 65%;
+	left: 64%;
+}
+
+.squaresarm5L{
+	background-color: yellow;
+	border-style: solid;
+	height:33px;
+	width: 80px;
+	position: absolute;
+	top: 65%;
+	left: 32%;
+}
+
+.squaresarm6R{
+	background-color: yellow;
+	border-style: solid;
+	height:30px;
+	width: 60px;
+	position: absolute;
+	top: 72%;
+	left: 65%;
+}
+
+.squaresarm6L{
+	background-color: yellow;
+	border-style: solid;
+	height:30px;
+	width: 60px;
+	position: absolute;
+	top: 72%;
+	left: 33%;
+}
+
+.armbaseR{
+	background-color: yellow;
+	border-style: solid;
+	height:70px;
+	width: 110px;
+	position: absolute;
+	top: 77%;
+	left: 63%;
+}
+
+.finger1R{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 63%;
+}
+
+.finger2R{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 66.7%;
+}
+
+.finger3R{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 70.3%;
+}
+
+.armbaseL{
+	background-color: yellow;
+	border-style: solid;
+	height:70px;
+	width: 110px;
+	position: absolute;
+	top: 77%;
+	left: 30%;
+}
+
+.finger1L{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 30%
+}
+
+.finger2L{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 33.7%
+}
+
+.finger3L{
+	background-color: yellow;
+	border-style: solid;
+	height:15px;
+	width: 33px;
+	position: absolute;
+	top: 93%;
+	left: 37.3%
+}
+
+.hips{
+	background-color: black;
+	height:30px;
+	width:50px;
+	position: absolute;
+	top: 84%;
+	left: 49.5%;
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+}
+
+.legsL {
+	border-style: solid;
+    width: 30px;
+    height: 40px;
+    transform: skew(40deg);
+    background: orange;
+    position: absolute;
+    top: 83%;
+    left: 54%;
+ }
+
+.legsR {
+	border-style: solid;
+    width: 30px;
+    height: 40px;
+    transform: skew(-40deg);
+    background: orange;
+    position: absolute;
+    top: 83%;
+    left: 47%;
+ }
+
+.legslowR {
+	border-style: solid;
+    width: 30px;
+    height: 25px;
+    transform: skew(40deg);
+    background: orange;
+    position: absolute;
+    top: 90%;
+    left: 46%;
+ }
+
+.legslowL {
+	border-style: solid;
+    width: 30px;
+    height: 25px;
+    transform: skew(-40deg);
+    background: orange;
+    position: absolute;
+    top: 90%;
+    left: 55%;
+ }
+
+.footR {
+	border-style: solid;
+    width: 40px;
+    height: 20px;
+    background: yellow;
+    position: absolute;
+    top: 95%;
+    left: 54.5%;
+ }
+
+.footL {
+	border-style: solid;
+    width: 40px;
+    height: 20px;
+    background: yellow;
+    position: absolute;
+    top: 95%;
+    left: 45.5%;
+
+}
+
+.jointfootL {
+	border-style: solid;
+	width: 20px;
+    height: 20px;
+    background: orange;
+    position: absolute;
+    top: 95%;
+    left: 48.5%;
+    border-radius: 100%;
+}
+
+.jointfootR {
+	border-style: solid;
+	width: 20px;
+    height: 20px;
+    background: orange;
+    position: absolute;
+    top: 95%;
+    left: 53.5%;
+    border-radius: 100%;
+}
+ 
+.jointL {
+	border-style: solid;
+	background-color: yellow;
+	height: 20px;
+	width: 45px;
+	position: absolute;
+	top:88%;
+	left:44.5%;
+	border-radius: 10%;
+}
+
+.jointR {
+	border-style: solid;
+	background-color: yellow;
+	height: 20px;
+	width: 45px;
+	position: absolute;
+	top:88%;
+	left:55%;
+	border-radius: 10%;
+}
+
+.backleft{
+	border-style: solid;
+	background-color: brown;
+	height: 80px;
+	width: 40px;
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	border-top-left-radius: 30%;
+	border-top-right-radius: 30%;
+}
+.backright{
+	border-style: solid;
+	background-color: brown;
+	height: 80px;
+	width: 40px;
+	position: absolute;
+	top: 20%;
+	left: 59.5%;
+	border-top-left-radius: 30%;
+	border-top-right-radius: 30%;
+}
+
+.hornshoulderL{
+	border-style: solid;
+	background-color: orange;
+	height: 50px;
+	width: 35px;
+	position: absolute;
+	top: 33%;
+	left: 42%;
+	border-top-left-radius: 30%;
+	border-top-right-radius: 30%;
+}
+
+.hornshoulderR{
+	border-style: solid;
+	background-color: orange;
+	height: 50px;
+	width: 35px;
+	position: absolute;
+	top: 33%;
+	left: 58%;
+	border-top-left-radius: 30%;
+	border-top-right-radius: 30%;
+}
+
+.triangle-upL {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 20px solid orange;
+	position: absolute;
+	top:30%;
+	left: 42.4%;
+}
+
+.triangle-upR {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 20px solid orange;
+	position: absolute;
+	top:30%;
+	left: 58.5%;
+}
+
+.circle1L {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:30.2%;
+	border-radius: 100%;
+}
+
+.circle2L {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:33.9%;
+	border-radius: 100%;
+}
+
+.circle3L {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:37.4%;
+	border-radius: 100%;
+}
+
+.circle1R {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:63.1%;
+	border-radius: 100%;
+}
+
+.circle2R {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:66.8%;
+	border-radius: 100%;
+}
+
+.circle3R {
+	border-style: solid;
+	background-color: orange;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top:88%;
+	left:70.5%;
+	border-radius: 100%;
+}
+
+.tube1L {
+	border-style: solid;
+    width: 30px;
+    height: 50px;
+    transform: skew(15deg);
+    background: orange;
+    position: absolute;
+    top: 23%;
+    left: 35%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+ }
+
+ .tube1R {
+	border-style: solid;
+    width: 30px;
+    height: 50px;
+    transform: skew(-15deg);
+    background: orange;
+    position: absolute;
+    top: 23%;
+    left: 66%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+ }
+
+ .tube2L {
+	border-style: solid;
+    width: 45px;
+    height: 30px;
+    transform: skew(60deg);
+    background: orange;
+    position: absolute;
+    top: 28%;
+    left: 29%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-top-left-radius: 100%;
+ }
+
+  .tube2R {
+	border-style: solid;
+    width: 45px;
+    height: 30px;
+    transform: skew(-60deg);
+    background: orange;
+    position: absolute;
+    top: 28%;
+    left: 70%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 100%;
+ }
+
+ .tubeback1L {
+	border-style: solid;
+    width: 30px;
+    height: 50px;
+    background: orange;
+    position: absolute;
+    top: 23%;
+    left: 34%;
+    border-top-left-radius: 20%
+
+ }
+
+  .tubeback1R {
+	border-style: solid;
+    width: 30px;
+    height: 50px;
+    background: orange;
+    position: absolute;
+    top: 23%;
+    left: 67%;
+    border-top-right-radius: 20%
+ }
+
+.tubeback2L {
+	border-style: solid;
+    width: 45px;
+    height: 50px;
+    transform: skew(30deg);
+    background: orange;
+    position: absolute;
+    top: 30%;
+    left: 29.5%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 100%;
+ }
+
+.tubeback2R {
+	border-style: solid;
+    width: 45px;
+    height: 60px;
+    transform: skew(-30deg);
+    background: orange;
+    position: absolute;
+    top: 28%;
+    left: 71%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+    border-top-right-radius: 100%;
+ }
+
+.screw1{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 47%;
+	left: 4%;
+	border-radius: 100%;
+}
+
+.screw1{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 47%;
+	left: 46%;
+	border-radius: 100%;
+}
+
+.screw2{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 50%;
+	left: 44.5%;
+	border-radius: 100%;
+}
+
+.screw3{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 54%;
+	left: 43%;
+	border-radius: 100%;
+}
+
+.screw4{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 47%;
+	left: 57%;
+	border-radius: 100%;
+}
+
+.screw5{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 50%;
+	left: 59%;
+	border-radius: 100%;
+}
+
+.screw6{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 54%;
+	left: 61%;
+	border-radius: 100%;
+}
+
+.screw7{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 68%;
+	left: 33%;
+	border-radius: 100%;
+}
+
+.screw8{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 68%;
+	left: 38%;
+	border-radius: 100%;
+}
+
+.screw9{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 68%;
+	left: 66%;
+	border-radius: 100%;
+}
+
+.screw10{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 68%;
+	left: 69%;
+	border-radius: 100%;
+}
+
+.screw11{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 54%;
+	left: 59%;
+	border-radius: 100%;
+}
+
+.screw12{
+	background-color: white;
+	border-style: solid;
+	height:5px;
+	width: 5px;
+	position: absolute;
+	top: 54%;
+	left: 59%;
+	border-radius: 100%;
+}
+
+.space-invader1 {
+      box-shadow: 0 0 0 1em blue,
+      0 1em 0 1em blue,
+      -2.5em 1.5em 0 .5em blue,
+      2.5em 1.5em 0 .5em blue,
+      -3em -3em 0 0 blue,
+      3em -3em 0 0 blue,
+      -2em -2em 0 0 blue,
+      2em -2em 0 0 blue,
+      -3em -1em 0 0 blue,
+      -2em -1em 0 0 blue,
+      2em -1em 0 0 blue,
+      3em -1em 0 0 blue,
+      -4em 0 0 0 blue,
+      -3em 0 0 0 blue,
+      3em 0 0 0 blue,
+      4em 0 0 0 blue,
+      -5em 1em 0 0 blue,
+      -4em 1em 0 0 blue,
+      4em 1em 0 0 blue,
+      5em 1em 0 0 blue,
+      -5em 2em 0 0 blue,
+      5em 2em 0 0 blue,
+      -5em 3em 0 0 blue,
+      -3em 3em 0 0 blue,
+      3em 3em 0 0 blue,
+      5em 3em 0 0 blue,
+      -2em 4em 0 0 blue,
+      -1em 4em 0 0 blue,
+      1em 4em 0 0 blue,
+      2em 4em 0 0 blue;
+      background: blue;
+      width: 1em;
+      height: 1em;
+      overflow: hidden;
+      margin: 50px 0 70px 65px;
+      position: absolute;
+      top: 8%;
+      left: 8%;
+}
+
+.space-invader2 {
+      box-shadow: 0 0 0 1em red,
+      0 1em 0 1em red,
+      -2.5em 1.5em 0 .5em red,
+      2.5em 1.5em 0 .5em red,
+      -3em -3em 0 0 red,
+      3em -3em 0 0 red,
+      -2em -2em 0 0 red,
+      2em -2em 0 0 red,
+      -3em -1em 0 0 red,
+      -2em -1em 0 0 red,
+      2em -1em 0 0 red,
+      3em -1em 0 0 red,
+      -4em 0 0 0 red,
+      -3em 0 0 0 red,
+      3em 0 0 0 red,
+      4em 0 0 0 red,
+      -5em 1em 0 0 red,
+      -4em 1em 0 0 red,
+      4em 1em 0 0 red,
+      5em 1em 0 0 red,
+      -5em 2em 0 0 red,
+      5em 2em 0 0 red,
+      -5em 3em 0 0 red,
+      -3em 3em 0 0 red,
+      3em 3em 0 0 red,
+      5em 3em 0 0 red,
+      -2em 4em 0 0 red,
+      -1em 4em 0 0 red,
+      1em 4em 0 0 red,
+      2em 4em 0 0 red;
+      background: red;
+      width: 1em;
+      height: 1em;
+      overflow: hidden;
+      margin: 50px 0 70px 65px;
+      position: absolute;
+      top: 56%;
+      left: 82%;
+}
+
+</style>
+<body>
+<div class ="backright"></div>
+<div class ="backleft"></div>
+<div class ="squaresarm2L"></div>
+<div class ="squaresarm2R"></div>
+<div class ="squaresarm3L"></div>
+<div class ="squaresarm3R"></div>
+<div class ="squaresarm1L"></div>
+<div class ="squaresarm1R"></div>
+<div class ="squaresarm4R"></div>
+<div class ="squaresarm4L"></div>
+<div class ="squaresarm6R"></div>
+<div class ="squaresarm6L"></div>
+<div class ="squaresarm5R"></div>
+<div class ="squaresarm5L"></div>
+<div class ="armbaseR"></div>
+<div class ="armbaseL"></div>
+<div class ="finger1R"></div>
+<div class ="finger2R"></div>
+<div class ="finger3R"></div>
+<div class ="finger1L"></div>
+<div class ="finger2L"></div>
+<div class ="finger3L"></div>
+<div class ="circle1L"></div>
+<div class ="circle2L"></div>
+<div class ="circle3L"></div>
+<div class ="circle1R"></div>
+<div class ="circle2R"></div>
+<div class ="circle3R"></div>
+<div class ="tubeback2L"></div>
+<div class ="tubeback2R"></div>
+<div class ="tubeback1L"></div>
+<div class ="tubeback1R"></div>
+<div class ="shoulderl"></div>
+<div class ="shoulder2"></div>
+<div class ="tube1L"></div>
+<div class ="tube1R"></div>
+<div class ="tube2L"></div>
+<div class ="tube2R"></div>
+<div class ="legslowL"></div>
+<div class ="legslowR"></div>
+<div class ="legsL"></div>
+<div class ="legsR"></div>
+<div class ="hips"></div>
+<div class ="footR"></div>
+<div class ="footL"></div>
+<div class ="jointR"></div>
+<div class ="jointL"></div>
+<div class ="jointfootR"></div>
+<div class ="jointfootL"></div>
+<div class ="body"></div>
+<div class ="head"></div>
+<div class ="hornshoulderR"></div>
+<div class ="hornshoulderL"></div>
+<div class ="triangle-upL"></div>
+<div class ="triangle-upR"></div>
+<div class ="core"></div>
+<div class ="eyesL"></div>
+<div class ="eyesL1"></div>
+<div class ="eyesR"></div>
+<div class ="eyesR1"></div>
+<div class ="space-invader1"></div>
+<div class ="space-invader2"></div>
+<div class ="screw1"></div>
+<div class ="screw2"></div>
+<div class ="screw3"></div>
+<div class ="screw4"></div>
+<div class ="screw5"></div>
+<div class ="screw6"></div>
+<div class ="screw7"></div>
+<div class ="screw8"></div>
+<div class ="screw9"></div>
+<div class ="screw10"></div>
+<div class ="headhalf"></div>
+</body>
+</html>
